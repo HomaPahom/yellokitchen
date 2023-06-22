@@ -103,8 +103,10 @@
 
 
 .burger__menu {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
     background: transparent;
     border: none;
     outline: none;
@@ -113,9 +115,22 @@
     /* display: none; */
 }
 
-.line {
+.burger__menu_close {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+/* .line {
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: #9093A6;
     display: inline-block;
 }
@@ -125,18 +140,18 @@
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1.5px;
     background: #9093A6;
     position: absolute;
 }
 
 .line::after {
-    top: 2px;
+    top: 3px;
 }
 
 .line::before {
     top: 9px;
-}
+} */
 
 .drop__menu_main{
     position: absolute;
@@ -144,7 +159,7 @@
     width: 100%;
     height: 900px;
     background: rgba(49, 48, 48, 0.6);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     opacity: 0;
     transition: .4s ease-in-out;
     z-index: 2;
@@ -714,64 +729,253 @@ form input{
     height: 600px;
 }
 
-.map__parts_one{
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: .5s ease-in-out;
+.map__points_one{
+    cursor: pointer;
 }
-
-.map__parts_one:hover{
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    
-}
-
-.map_photo{
-    z-index: 98;
-}
-
-.photo__map_one{
+/* карта */
+/* --------------------------------------------- */
+.map__points_one_map{
     position: absolute;
     top: 157px;
     left: 407.94px;
 }
 
-.map__svg_one path{
-    transition: .4s;
-}
-
-.map__svg_one path:hover{
-    fill: #FFE145;
-    opacity: .7;
-}
-
-.map__point_one{
+.map__points_one:hover .map__points_one_transparent{
     position: absolute;
-    top: 163.78px;
-    left: 563.67px;
-    opacity: 0;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_one_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* --------------------------------------------- */
+.map__points_second_map{
+    position: absolute;
+    top: 71.5px;
+    left: 636px;
+}
+
+.map__points_second:hover .map__points_second_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_second_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* ----------------------------------------------------- */
+.map__points_three_map{
+    position: absolute;
+    top: 69px;
+    left: 399px;
+}
+
+.map__points_three:hover .map__points_three_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_three_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* ------------------------------------------------------- */
+.map__points_four_map{
+    position: absolute;
+    top: 209.5px;
+    left: 329px;
+}
+
+.map__points_four:hover .map__points_four_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_four_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* ------------------------------- */
+.map__points_five_map{
+    position: absolute;
+    top: 342px;
+    left: 326.5px;
+}
+
+.map__points_five:hover .map__points_five_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_five_transparent{
+    fill: transparent;
+    opacity: 0.9;
     transition: .4s;
 }
 
-.map__point_second{
+/* -------------------------------------------- */
+.map__points_six_map{
+    position: absolute;
+    top: 343px;
+    left: 397.83px;
+}
+
+.map__points_six:hover .map__points_six_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_six_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* ----------------------------------------- */
+.map__points_seven_map{
+    position: absolute;
+    top: 319.5px;
+    left: 434px;
+}
+
+.map__points_seven:hover .map__points_seven_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_seven_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* ----------------------------------------- */
+.map__points_eight_map{
+    position: absolute;
+    top: 289px;
+    left: 476.5px;
+    transition: .9s;
+}
+
+.map__points_eight:hover .map__points_eight_transparent{
+    position: absolute;
+    top: 157px;
+    left: 407.94px;
+    fill: #ffd70f;
+}
+
+.map__points_eight_transparent{
+    fill: transparent;
+    opacity: 0.9;
+    transition: .4s;
+}
+/* карта */
+
+/* точки на карте */
+.point__map_one{
+    position: absolute;
+    top: 340px;
+    left: 694px;
+    transition: .4s;
+    display: block;
+    transition: .4s;
+}
+
+.point__map_one:hover{
+    transform: scale(1.2);
+}
+
+.point__map_second{
+    position: absolute;
+    top: 217px;
+    left: 646px;
+    transition: .4s;
+    display: block;
+}
+
+.point__map_second:hover{
+    transform: scale(1.2);
+}
+
+.point__map_three{
+    position: absolute;
+    top: 160px;
+    left: 557px;
+    display: block;
+    transition: .4s;
+    z-index: 99;
+    opacity: 1;
+}
+
+.point__map_three:hover{
+    transform: scale(1.2);
+}
+
+.point__map_four{
     position: absolute;
     top: 233px;
     left: 509px;
-    opacity: 0;
+    display: block;
     transition: .4s;
 }
 
-.map__one:hover .map__point_one{
-    opacity: 1;
+.point__map_four:hover{
     transform: scale(1.2);
+}
+/* -------------------------------------- */
+.point__map_second_map{
+    position: absolute;
+    top: 84.78px;
+    left: 707.67px;
+    transition: .4s;
 }
 
-.map__one:hover .map__point_one{
-    opacity: 1;
+.point__map_second_map:hover{
     transform: scale(1.2);
 }
+/* ------------------------------- */
+.point__map_three_map{
+    position: absolute;
+    top: 124.78px;
+    left: 482.67px;
+    transition: .4s;
+}
+
+.point__map_three_map:hover{
+    transform: scale(1.2);
+}
+/* ---------------------------------- */
+.point__map_eight_map{
+    position: absolute;
+    top: 379.78px;
+    left: 587.67px;
+    transition: .4s;
+}
+
+.point__map_eight_map:hover{
+    transform: scale(1.2);
+}
+/* точки на карте */
+
+
 
 .yellok_ins{
     margin: 72px auto;
